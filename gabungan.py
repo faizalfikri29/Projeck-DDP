@@ -43,36 +43,13 @@ def main():
     # Set page configuration
     st.set_page_config(page_title="Posyandu Balita", page_icon=":baby:", layout="wide")
 
-     # CSS untuk styling
     st.markdown("""
         <style>
-        .header {
-            text-align: center;
-            color: #4CAF50;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        .subheader {
-            color: #2196F3;
-        }
-        .info {
-            background-color: #f9f9f9;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .button:hover {
-            background-color: #45a049;
-        }
+            .main {
+                background-color: 	#FF8C00 !important;
+            }
         </style>
-    """, unsafe_allow_html=True)
+""", unsafe_allow_html=True)
 
     # Judul
     st.title("📊 Informasi Kesehatan Balita Posyandu")
@@ -82,10 +59,7 @@ def main():
         ["","Usia Balita", "Berat Badan Ideal", "Tinggi Badan Balita"], 
         index=0
     )
-    try:
-        st.image("img/gbmr.balita.jpg")
-    except FileNotFoundError:
-        st.warning("Gambar tidak ditemukan")
+    st.image("img/gbmr.balita.jpg")
 
     st.markdown("Aplikasi ini dirancang untuk membantu Anda memantau perkembangan si kecil. Untuk mendapatkan hasil yang akurat, pastikan data yang Anda masukkan sudah benar.")
     st.info("Adapun data sesuai masukan WHO bahwa Usia balita 1-5 tahun")
