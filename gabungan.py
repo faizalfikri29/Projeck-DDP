@@ -45,9 +45,9 @@ def main():
 
     st.markdown("""
         <style>
-            .main {
-                background-color: 	#FF8C00 !important;
-            }
+            .stApp {
+            background-color: #BDB76B;
+        }
         </style>
 """, unsafe_allow_html=True)
 
