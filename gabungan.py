@@ -46,14 +46,14 @@ def main():
     st.markdown("""
         <style>
             .stApp {
-            background-color: #BDB76B;
+            background-color: 	#696969;
         }
             [data-testid="stSidebar"]{
             background-color: #A9A9A9;
             color: white;
         }
             [data-testid="stSidebar"] * {
-            color: black !important;
+            color: white !important;
             font-size: 14px;
     }
         </style>
@@ -147,14 +147,14 @@ def hitung_bb():
     
     # Tombol hitung
     if st.button("Hitung Berat Badan Ideal"):
-        try:
-            # # validasi usia yang dimasukan
-            # if satuan == 'tahun' and (usia >= 5 and usia <= 1):
-            #     st.error("Usia balita harus berada dalam rentang 1 tahun hingga 5 tahun. Silakan periksa kembali input Anda.")
-            #     return
-            # if satuan == 'bulan' and usia >= 12:
-            #     st.error("Usia balita harus berada dalam rentang 1 bulan hingga 12 bulan. Silakan periksa kembali input Anda.")
-            #     return
+        
+            # validasi usia yang dimasukan
+            if satuan == 'tahun' and (usia >= 5 and usia <= 1):
+                st.error("Usia balita harus berada dalam rentang 1 tahun hingga 5 tahun. Silakan periksa kembali input Anda.")
+                return
+            if satuan == 'bulan' and usia >= 12:
+                st.error("Usia balita harus berada dalam rentang 1 bulan hingga 12 bulan. Silakan periksa kembali input Anda.")
+                return
             # Hitung BBI
             bbi = hitung_bbi_balita(usia, satuan)
             
@@ -165,9 +165,6 @@ def hitung_bb():
                 st.info("Rumus: BBI = (usia dalam bulan / 2) + 4")
             else:
                 st.info("Rumus: BBI = (usia dalam tahun x 2) + 8")
-        
-        except Exception as e:
-            st.error(f"Terjadi kesalahan: {e}")
 
 def hitung_tinggi_badan_balita_ui():
     st.subheader("📏 Estimasi Tinggi Badan Balita")
