@@ -46,14 +46,14 @@ def main():
     st.markdown("""
         <style>
             .stApp {
-            background-color: 	#696969;
+            background-color: #FFFACD;
         }
             [data-testid="stSidebar"]{
             background-color: #A9A9A9;
-            color: white;
+            color: black;
         }
             [data-testid="stSidebar"] * {
-            color: white !important;
+            color: black !important;
             font-size: 14px;
     }
         </style>
