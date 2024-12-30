@@ -48,6 +48,14 @@ def main():
             .stApp {
             background-color: #BDB76B;
         }
+            [data-testid="stSidebar"]{
+            background-color: #A9A9A9;
+            color: white;
+        }
+            [data-testid="stSidebar"] * {
+            color: black !important;
+            font-size: 14px;
+    }
         </style>
 """, unsafe_allow_html=True)
 
